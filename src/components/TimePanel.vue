@@ -12,14 +12,20 @@
                 :class="{ 'absolute left-1/2 -translate-x-1/2': !isPanelOpen, 'absolute left-3': isPanelOpen }">
                 <span>{{ currentTime }}</span>
             </div>
-            <div class="absolute left-28 transition-all ease-in-out whitespace-nowrap"
+            <div class="absolute left-28 transition-all ease-in-out whitespace-nowrap flex w-5/6"
                 :class="{ 'opacity-0 duration-75 delay-0': !isPanelOpen, 'opacity-1 duration-700 delay-200': isPanelOpen }">
-                <i class="icon icon-a-clockbadgecheckmark-1 text-xl"></i>
-                <span class="inline-block">运营 {{ runningTime }}天</span>
-                <i class="icon icon-icon-test text-xl ml-2"></i>
-                <span class="inline-block">服务 124玩家</span>
-                <i class="icon icon-qian1 text-xl ml-2"></i>
-                <span class="inline-block">耗资 2千余元</span>
+                <div class="flex-1 items-center">
+                    <i class="icon icon-a-clockbadgecheckmark-1 text-xl"></i>
+                    <span class="inline-block">运营 {{ runningTime }}天</span>
+                </div>
+                <div class="flex-1 items-center">
+                    <i class="icon icon-icon-test text-xl"></i>
+                    <span class="inline-block">服务 124玩家</span>
+                </div>
+                <div class="flex-1 items-center">
+                    <i class="icon icon-qian1 text-xl"></i>
+                    <span class="inline-block">耗资 2千余元</span>
+                </div>
                 <!-- <span class="inline-block ml-2">Create by MistMC team</span> -->
             </div>
         </div>
@@ -64,5 +70,4 @@ export default {
 </script>
 
 
-<style scoped>
-</style>
+<style scoped></style>

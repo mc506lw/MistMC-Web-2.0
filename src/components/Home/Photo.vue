@@ -39,10 +39,10 @@ export default {
         data() {
                 return {
                         images: [
-                                "http://iph.href.lu/800x600?text=玩家1",
-                                "http://iph.href.lu/800x600?text=玩家2",
-                                "http://iph.href.lu/800x600?text=玩家3",
-                                "http://iph.href.lu/800x600?text=玩家4",
+                                "https://www.idcd.com/tool/placeholder/800x600?text=玩家1",
+                                "https://www.idcd.com/tool/placeholder/800x600?text=玩家2",
+                                "https://www.idcd.com/tool/placeholder/800x600?text=玩家3",
+                                "https://www.idcd.com/tool/placeholder/800x600?text=玩家4",
                         ],
                         currentIndex: 0,
                         intervalId: null, // 定时器ID

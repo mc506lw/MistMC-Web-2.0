@@ -1,0 +1,35 @@
+<template>
+    <div v-if="isPortrait" class="fixed inset-0 bg-white flex items-center justify-center z-[500]">
+      <div class="text-center">
+        <h1 class="text-black text-xl font-semibold">请旋转您的设备或使用电脑来浏览此页面</h1>
+        <p class="text-gray-500">此页面不支持竖屏浏览，请使用电脑或将设备横屏浏览。</p>
+        <h2 class="text-3xl font-bold">https://ddev.mistmc.top</h2>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        isPortrait: window.innerWidth < window.innerHeight,
+      };
+    },
+    mounted() {
+      window.addEventListener('resize', this.checkOrientation);
+    },
+    beforeUnmount() {
+      window.removeEventListener('resize', this.checkOrientation);
+    },
+    methods: {
+      checkOrientation() {
+        this.isPortrait = window.innerWidth < window.innerHeight;
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+  /* 可添加额外的样式，如动画等 */
+  </style>
+  

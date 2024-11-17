@@ -57,7 +57,7 @@
 
         <div class="border-t mt-8 pt-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <img src="http://iph.href.lu/900x900" alt="Logo" class="w-12 h-12" />
+                <img src="https://www.idcd.com/tool/placeholder/900x900?text=logo" class="w-12 h-12" />
                 <span class="font-semibold text-lg">MistMC</span>
             </div>
             <p class="text-sm text-gray-600">&copy; 2024 MistMC 禁止盗用 制作者: mc506lw</p>

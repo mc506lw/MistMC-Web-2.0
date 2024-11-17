@@ -1,0 +1,45 @@
+<template>
+  <img src="../assets/3.png" class="absolute -top-32 right-0 -z-10 h-full object-cover" />
+  <div class="absolute top-[25vh] left-32">
+    <Helloh1 />
+  </div>
+  <div class="h-[60vh]"></div>
+  <div>
+    <Better />
+  </div>
+  <div>
+    <Play-fun />
+  </div>
+  <div>
+    <Team />
+  </div>
+  <div>
+    <Photo />
+  </div>
+  <div>
+    <Joinus />
+  </div>
+</template>
+
+<script>
+import Helloh1 from '../components/Home/Helloh1.vue';
+import Better from '../components/Home/Better.vue';
+import PlayFun from '../components/Home/PlayFun.vue';
+import Team from '../components/Home/Team.vue';
+import Photo from '../components/Home/Photo.vue';
+import Joinus from '../components/Home/Joinus.vue';
+
+export default {
+  components: {
+    Helloh1,
+    Better,
+    PlayFun,
+    Team,
+    Photo,
+    Joinus,
+  },
+  name: 'Home'
+};
+</script>
+
+<style></style>
