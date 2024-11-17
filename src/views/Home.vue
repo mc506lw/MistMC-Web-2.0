@@ -1,5 +1,5 @@
 <template>
-  <img src="../assets/3.png" class="absolute -top-32 right-0 -z-10 h-full object-cover" />
+  <img src="../assets/3.png" class="absolute -top-32 left-0 -z-10 w-full h-full object-cover" />
   <div class="absolute top-[25vh] left-32">
     <Helloh1 />
   </div>
