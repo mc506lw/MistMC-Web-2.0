@@ -4,22 +4,21 @@
         <div class="col-span-2 row-span-2 grid gap-4 grid-rows-2 grid-cols-3 grid-flow-col">
             <div data-aos="fade-up" :data-aos-delay="50" class="bg-white rounded-lg shadow-lg p-4 col-span-3 row-span-1">
                 <h2 class="text-2xl font-bold mb-2 text-center">科技空岛服</h2>
-                <p class="text-xl mb-4 text-center">科技空岛正在研发中</p>
+                <p class="text-xl mb-4 text-center">科技空岛——创新与冒险的交汇点，正在火热研发中！</p>
             </div>
             <div data-aos="fade-up" :data-aos-delay="100" class="bg-white rounded-lg shadow-lg p-4 col-span-1 row-span-1">
                 <h2 class="text-2xl font-bold mb-2">服务器状态</h2>
-                <p class="text-xl mt-2">正常研发中</p>
-                <p class="text-xl mt-2">未开放</p>
+                <p class="text-xl mt-2">当前正如火如荼地研发中，蓄势待发！</p>
+                <p class="text-xl mt-2">尚未开放，敬请期待！</p>
             </div>
             <div data-aos="fade-up" :data-aos-delay="150" class="bg-white rounded-lg shadow-lg p-4 col-span-1 row-span-1">
                 <h2 class="text-2xl font-bold mb-2">服务器版本</h2>
                 <p class="text-xl mt-2">1.20.1</p>
-                <p class="text-xl mt-2">Forge客户端</p>
+                <p class="text-xl mt-2">基于NeoForge客户端，带给你前所未有的科技体验！</p>
             </div>
             <div data-aos="fade-up" :data-aos-delay="200" class="bg-white rounded-lg shadow-lg p-4 col-span-1 row-span-1">
                 <h2 class="text-2xl font-bold mb-2">适合玩家</h2>
-                <p class="text-xl mt-2">喜欢肝的人</p>
-                <p class="text-xl mt-2">喜欢自动化的玩家</p>
+                <p class="text-xl mt-2">你是那种能沉浸在复杂精密的自动化系统中、乐此不疲的玩家吗？</p>
             </div>
         </div>
         <div class="grid gap-4 grid-rows-2 grid-flow-col row-span-2 col-span-2">

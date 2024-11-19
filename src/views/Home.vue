@@ -6,17 +6,9 @@
   <div class="h-[60vh]"></div>
   <div>
     <Better />
-  </div>
-  <div>
     <Play-fun />
-  </div>
-  <div>
     <Team />
-  </div>
-  <div>
     <Photo />
-  </div>
-  <div>
     <Joinus />
   </div>
 </template>
@@ -42,4 +34,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>

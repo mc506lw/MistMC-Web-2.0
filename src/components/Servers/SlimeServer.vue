@@ -4,22 +4,21 @@
         <div class="col-span-2 row-span-2 grid gap-4 grid-rows-2 grid-cols-3 grid-flow-col">
             <div data-aos="fade-up" :data-aos-delay="50" class="bg-white rounded-lg shadow-lg p-4 col-span-3 row-span-1">
                 <h2 class="text-2xl font-bold mb-2 text-center">粘液生存服</h2>
-                <p class="text-xl mb-4 text-center">欢迎来到粘液生存服！这里有着各种各样的生存模式，有着各种各样的玩法，还有着各种各样的插件！</p>
+                <p class="text-xl mb-4 text-center">这里是神秘莫测的粘液生存服！一个充满无限可能的世界，生存模式多样，玩法丰富多彩，插件应有尽有，绝对让你体验到前所未有的冒险与挑战。</p>
             </div>
             <div data-aos="fade-up" :data-aos-delay="100" class="bg-white rounded-lg shadow-lg p-4 col-span-1 row-span-1">
                 <h2 class="text-2xl font-bold mb-2">服务器状态</h2>
                 <p class="text-xl mt-2">正常运行中...</p>
-                <p class="text-xl mt-2">无异常</p>
+                <p class="text-xl mt-2">服务器稳定运行中，随时为你准备好最畅快的游戏体验！</p>
             </div>
             <div data-aos="fade-up" :data-aos-delay="150" class="bg-white rounded-lg shadow-lg p-4 col-span-1 row-span-1">
                 <h2 class="text-2xl font-bold mb-2">服务器版本</h2>
                 <p class="text-xl mt-2">1.20.4</p>
-                <p class="text-xl mt-2">同时支持1.18.2-最新版</p>
+                <p class="text-xl mt-2">兼容1.18.2至最新版本，带你畅游无缝对接的生存世界！</p>
             </div>
             <div data-aos="fade-up" :data-aos-delay="200" class="bg-white rounded-lg shadow-lg p-4 col-span-1 row-span-1">
                 <h2 class="text-2xl font-bold mb-2">适合玩家</h2>
-                <p class="text-xl mt-2">喜欢肝也喜欢养老的人</p>
-                <p class="text-xl mt-2">喜欢生存的玩家</p>
+                <p class="text-xl mt-2">你是那种喜欢肝游戏的同时也想悠闲养老的玩家吗？</p>
             </div>
         </div>
         <div class="grid gap-4 grid-rows-2 grid-flow-col row-span-2 col-span-2">
@@ -77,9 +76,9 @@
             </div>
         </div>
         <!-- 地图图片 -->
-        <div data-aos="fade-up" :data-aos-delay="500"  class="lazyload bg-white rounded-lg shadow-lg p-4 col-span-1 row-span-2 max-h-[35vh] w-full">
+        <div data-aos="fade-up" :data-aos-delay="500"  class="bg-white rounded-lg shadow-lg p-4 col-span-1 row-span-2 max-h-[35vh] w-full">
             <img data-src="https://www.idcd.com/tool/placeholder/900x900?text=sf"
-                class="w-full h-full object-cover rounded-lg">
+                class="lazyload w-full h-full object-cover rounded-lg">
         </div>
     </div>
 </template>

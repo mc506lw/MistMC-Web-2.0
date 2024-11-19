@@ -15,13 +15,13 @@
             <span class="text-4xl font-bold text-black">来进入服务器！</span>
         </div>
         <div data-aos="fade-up" class="flex justify-center items-center h-auto w-full">
-            <a href="https://docs.mistmc.top/" target="_blank" class="text-xl text-black underline">需要帮助？点我看看文档！</a>
+            <a href="https://docs.mistmc.top/zh-CN/docs/start/start.html" target="_blank" class="text-xl text-black underline">有疑问？点击这里查看文档！</a>
         </div>
         <!-- 自定义弹窗 -->
         <div v-if="showAlert" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
             <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
                 <h2 class="text-xl font-semibold text-center text-blue-500">IP已复制!</h2>
-                <p class="text-center text-gray-700 mt-2">IP 地址[mc.mistmc.top]已成功复制到剪贴板。</p>
+                <p class="text-center text-gray-700 mt-2">恭喜！IP 地址 [mc.mistmc.top] 已经成功复制到您的剪贴板！</p>
                 <div class="mt-4 flex justify-center">
                     <button @click="closeAlert"
                         class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">关闭</button>

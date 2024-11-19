@@ -14,19 +14,21 @@
             </div>
             <div class="absolute left-28 transition-all ease-in-out whitespace-nowrap flex w-5/6"
                 :class="{ 'opacity-0 duration-75 delay-0': !isPanelOpen, 'opacity-1 duration-700 delay-200': isPanelOpen }">
-                <div class="flex-1 items-center">
+                <div class="flex-1 w-1/4 items-center">
                     <i class="icon icon-a-clockbadgecheckmark-1 text-xl"></i>
                     <span class="inline-block">运营 {{ runningTime }}天</span>
                 </div>
-                <div class="flex-1 items-center">
+                <div class="flex-1 w-1/4 items-center">
                     <i class="icon icon-icon-test text-xl"></i>
                     <span class="inline-block">服务 124玩家</span>
                 </div>
-                <div class="flex-1 items-center">
+                <div class="flex-1 w-1/4 items-center">
                     <i class="icon icon-qian1 text-xl"></i>
                     <span class="inline-block">耗资 2千余元</span>
                 </div>
                 <!-- <span class="inline-block ml-2">Create by MistMC team</span> -->
+                <!-- <div class="wave-bar absolute w-full h-full bg-blue-500 animate-wave"></div> -->
+
             </div>
         </div>
     </div>
@@ -70,4 +72,23 @@ export default {
 </script>
 
 
-<style scoped></style>
+<style scoped>
+@keyframes wave {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.wave-bar {
+    animation: wave 3s ease-in-out infinite;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 25%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.3) 75%);
+    background-size: 200% 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+</style>

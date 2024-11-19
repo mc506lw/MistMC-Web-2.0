@@ -13,13 +13,14 @@
                         <!-- 图片切换按钮 -->
                         <div class="absolute top-0 left-0 right-0 bottom-0 flex justify-between items-center">
                                 <button @click="prev"
-                                        class="h-full opacity-0 text-2xl text-gray-200 p-2 rounded-sm transition-all hover:opacity-100">
+                                        class="h-full opacity-0 text-2xl text-gray-700 p-2 rounded-sm transition-all hover:opacity-100 bg-gradient-to-r from-gray-300 to-white/0">
                                         <span class="icon icon-arrow-left"></span>
                                 </button>
                                 <button @click="next"
-                                        class="h-full opacity-0 text-2xl text-gray-200 p-2 rounded-sm transition-all hover:opacity-100">
+                                        class="h-full opacity-0 text-2xl text-gray-700 p-2 rounded-sm transition-all hover:opacity-100 bg-gradient-to-r from-white/0 to-gray-300">
                                         <span class="icon icon-arrow-right"></span>
                                 </button>
+
                         </div>
 
                         <!-- 图片切换指示器（小圆片） -->

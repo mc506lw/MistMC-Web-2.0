@@ -22,6 +22,18 @@ const routes = [
         redirect: 'servers/slime',
       },
       {
+        path: 'servers/slime',
+        redirect: 'servers/slime',
+      },
+      {
+        path: 'servers/retirement',
+        redirect: 'servers/retirement',
+      },
+      {
+        path: 'servers/skyblock',
+        redirect: 'servers/skyblock',
+      },
+      {
         path: 'slime',
         name: 'SlimeServer',
         component: SlimeServer,
@@ -55,6 +67,11 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+// 切换路由时，滚动到最上方
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0);
+  next();
 });
 
 export default router;
