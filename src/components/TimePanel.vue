@@ -71,7 +71,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
 @keyframes wave {
     0% {
