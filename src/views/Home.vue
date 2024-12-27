@@ -1,6 +1,6 @@
 <template>
-  <img src="../assets/3.png" class="absolute -top-32 left-0 -z-10 w-full h-full object-cover" />
-  <div class="absolute top-[25vh] left-32">
+  <img src="https://s1.imagehub.cc/images/2024/12/27/7da9b1423b46c58627e4dd2fc2c9fc97.png" class="absolute -top-32 left-0 -z-10 w-full h-full object-cover" />
+  <div class="absolute top-[25vh] left-8 md:left-32">
     <Helloh1 />
   </div>
   <div class="h-[60vh]"></div>
@@ -8,7 +8,8 @@
     <Better />
     <Play-fun />
     <Team />
-    <Photo />
+    <!-- <Photo /> -->
+    <Gooder />
     <Joinus />
   </div>
 </template>
@@ -20,6 +21,8 @@ import PlayFun from '../components/Home/PlayFun.vue';
 import Team from '../components/Home/Team.vue';
 import Photo from '../components/Home/Photo.vue';
 import Joinus from '../components/Home/Joinus.vue';
+import Gooder from '../components/Home/Gooder.vue';
+
 
 export default {
   components: {
@@ -29,6 +32,7 @@ export default {
     Team,
     Photo,
     Joinus,
+    Gooder,
   },
   name: 'Home'
 };

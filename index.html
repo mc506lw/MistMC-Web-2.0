@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mistweb</title>
+  <title>MistMC 官网</title>
+  <meta name="keywords" content="MistMC, Minecraft, 服务器, 粘液科技, 生存, 建筑" />
+  <meta name="description" content="MistMC 是一个 Minecraft 服务器，一个以生存为核心的粘液科技服务器。我们致力于为玩家提供一个良好的游戏体验，并提供一个开放的社区。" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
   <link rel="stylesheet" href="/src/main.css" />
   <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4735646_tiklhc9x4r.css">
@@ -30,5 +33,14 @@
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
 </body>
+
+<script>
+  if (window.sessionStorage.getItem('appState')) {
+    const state = JSON.parse(window.sessionStorage.getItem('appState'));
+    router.push({ path: state.path, query: state.query, params: state.params });
+  } else {
+    router.push('/');
+  }
+</script>
 
 </html>

@@ -1,8 +1,8 @@
 <template>
     <div class="bg-slate-100 h-72 w-full">
-        <div class="relative top-16 left-32 text-4xl font-bold text-black">加入我们</div>
-        <div data-aos="fade-up" class="flex justify-center items-center h-auto w-full mt-16">
-            <span class="text-4xl font-bold text-black ml-32">请使用</span>
+        <div class="relative top-4 lg:top-16 left-4 lg:left-32 text-4xl font-bold text-black">加入我们</div>
+        <div data-aos="fade-up" class="flex flex-wrap justify-center items-center h-auto w-full mt-4 lg:mt-16">
+            <span class="text-4xl font-bold text-black ml-2 md:ml-32">请使用</span>
             <div class="bg-slate-400 rounded-md mx-4 p-4 flex transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                 :class="{ 'scale-90 duration-75': showAlert }">
                 <h1 class="text-3xl p-4 rounded-lg">IP:</h1>

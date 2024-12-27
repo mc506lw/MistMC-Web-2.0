@@ -1,5 +1,5 @@
 <template>
-    <div class="relative">
+    <div class="relative hidden lg:block">
         <!-- 中部时间区域 -->
         <div @click="togglePanel" :class="{
             'transition-all duration-500 ease-in-out': true,
@@ -14,15 +14,15 @@
             </div>
             <div class="absolute left-28 transition-all ease-in-out whitespace-nowrap flex w-5/6"
                 :class="{ 'opacity-0 duration-75 delay-0': !isPanelOpen, 'opacity-1 duration-700 delay-200': isPanelOpen }">
-                <div class="flex-1 w-1/4 items-center">
+                <div class="flex-1 w-48 items-center">
                     <i class="icon icon-a-clockbadgecheckmark-1 text-xl"></i>
                     <span class="inline-block">运营 {{ runningTime }}天</span>
                 </div>
-                <div class="flex-1 w-1/4 items-center">
+                <div class="flex-1 w-48 items-center hidden mr-0 xl:mr-8 2xl:mr-0 xl:block">
                     <i class="icon icon-icon-test text-xl"></i>
                     <span class="inline-block">服务 124玩家</span>
                 </div>
-                <div class="flex-1 w-1/4 items-center">
+                <div class="flex-1 w-48 items-center hidden 2xl:block">
                     <i class="icon icon-qian1 text-xl"></i>
                     <span class="inline-block">耗资 2千余元</span>
                 </div>

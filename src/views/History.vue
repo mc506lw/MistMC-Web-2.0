@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="max-w-4xl mx-auto">
-            <h1 class="absolute text-4xl font-bold top-24 left-24">历史</h1>
-            <div class="mt-24 relative border-l border-blue-500">
+        <div class="max-w-4xl mx-8 xl:mx-auto">
+            <h1 class="absolute text-4xl font-bold top-24 left-4 xl:left-24">岚域的历史</h1>
+            <div class="mt-32 xl:mt-24 relative border-l border-blue-500">
                 <div data-aos="fade-up" :data-aos-delay="Number(index) * 100" v-for="item in timeline" :key="item.date"
                     class="mb-24 pl-8">
                     <div
@@ -36,6 +36,11 @@ export default {
                     "date": "今天",
                     "title": "岚域依然在稳定运行！",
                     "content": "岚域，依旧在激情澎湃的旅程中稳步前行！这片虚拟的世界，将不断加入更多奇妙的玩法，带给所有玩家无尽的乐趣与挑战。前路漫漫，游戏的精彩将愈发绚丽多彩！"
+                },
+                {
+                    "date": "2024-12-27",
+                    "title": "新官网上线啦！",
+                    "content": "新官网已经上线！你是不是正准备进入一个信息满载、资源丰富的知识宝库？这一刻，属于每一个想要探索岚域深度的你。"
                 },
                 {
                     "date": "2024-11-10",

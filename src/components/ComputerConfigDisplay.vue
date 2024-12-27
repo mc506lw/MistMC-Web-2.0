@@ -12,7 +12,7 @@
 <script>
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
- 
+
 export default {
   name: 'ServerConfig3D',  // 组件名称
   data() {
@@ -24,6 +24,9 @@ export default {
   },
   mounted() {
     this.init3DScene();  // 组件挂载后初始化3D场景
+  },
+  beforeDestroy() {  // 或者在 Vue 3 中使用 unmounted
+    window.removeEventListener('mousemove', this.onMouseMove);
   },
   methods: {
     init3DScene() {  // 初始化3D场景的方法
@@ -154,28 +157,29 @@ export default {
     onMouseMove(event, scene, camera) {  // 鼠标移动事件处理方法
       // 获取canvas元素的大小
       const canvas = this.$refs.canvas;
+      if (!canvas) return;  // 检查canvas是否为null
       const rect = canvas.getBoundingClientRect();
       const scaleX = canvas.width / rect.width;
       const scaleY = canvas.height / rect.height;
- 
+
       // 更新鼠标位置（归一化）
       this.mouse.x = ((event.clientX - rect.left) * scaleX) / canvas.width * 2 - 1;
       this.mouse.y = -((event.clientY - rect.top) * scaleY) / canvas.height * 2 + 1;
- 
+
       // 更新射线
       this.raycaster.setFromCamera(this.mouse, camera);
       const intersects = this.raycaster.intersectObjects(scene.children, true);
- 
+
       // 遍历所有硬件，恢复它们的默认颜色
       scene.traverse((child) => {
         if (child.isMesh && child.material && child.material.color && child.originalColor) {
           child.material.color.set(child.originalColor);
         }
       });
- 
+
       if (intersects.length > 0) {
         const object = intersects[0].object;
- 
+
         // 高亮显示硬件
         if (object.material && object.material.color) {
           if (!object.originalColor) {
@@ -184,7 +188,7 @@ export default {
           }
           object.material.color.set(0xffff00); // 高亮为黄色
         }
- 
+
         // 显示硬件信息
         const hardwareData = this.getHardwareData(object);
         this.hoveredHardware = hardwareData;

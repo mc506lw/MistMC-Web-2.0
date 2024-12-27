@@ -7,6 +7,7 @@ import Servers from '../views/Servers.vue';
 import History from '../views/History.vue';
 import Players from '../views/Players.vue';
 import CCD from '../views/CCD.vue';
+import NotFound from '../components/NotFound.vue';
 
 const routes = [
   {
@@ -19,19 +20,7 @@ const routes = [
     children: [
       {
         path: '',
-        redirect: 'servers/slime',
-      },
-      {
-        path: 'servers/slime',
-        redirect: 'servers/slime',
-      },
-      {
-        path: 'servers/retirement',
-        redirect: 'servers/retirement',
-      },
-      {
-        path: 'servers/skyblock',
-        redirect: 'servers/skyblock',
+        redirect: 'slime',
       },
       {
         path: 'slime',
@@ -61,6 +50,10 @@ const routes = [
   {
     path: '/ccd',
     component: CCD
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: NotFound,
   }
 ];
 
@@ -68,11 +61,14 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-// 切换路由时，滚动到最上方
+
 router.beforeEach((to, from, next) => {
   window.scrollTo(0, 0);
   next();
 });
 
-export default router;
+router.afterEach((to, from) => {
+  window.sessionStorage.setItem('appState', JSON.stringify({ path: to.path, query: to.query, params: to.params }));
+});
 
+export default router;

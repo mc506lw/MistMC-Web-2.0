@@ -44,10 +44,10 @@
                     </div>
                 </div>
             </div>
-            <div class="w-32 flex justify-center items-center">
+            <RouterLink to="/" class="w-32 flex justify-center items-center">
                 <h1 class="ml-1 text-3xl font-bold transition-opacity duration-500 opacity-100">
                     MistMC</h1>
-            </div>
+            </RouterLink>
         </div>
 
         <!-- 中部时间 -->
@@ -65,17 +65,17 @@
                 </a>
             </div>
             <div
-                class="h-12 w-64 bg-white/60 rounded-md shadow-xl flex items-center justify-between backdrop-blur-[2px]">
+                class="h-12 w-44 bg-white/60 rounded-md shadow-xl flex items-center justify-between backdrop-blur-[2px]">
                 <RouterLink to="/"
                     class="ml-2 hover:bg-gray-200 p-1 rounded-md cursor-pointer hover:shadow-md transition-all ease-in-out duration-300">
                     <i class="text-xl icon icon-home"></i>
                     <span class="text-xl ml-1">首页</span>
                 </RouterLink>
-                <RouterLink to="/servers"
+                <!-- <RouterLink to="/servers/slime"
                     class="hover:bg-gray-200 p-1 rounded-md cursor-pointer hover:shadow-md transition-all ease-in-out duration-300">
                     <i class="text-xl icon icon-fuwuqi1"></i>
                     <span class="text-xl ml-1">子服</span>
-                </RouterLink>
+                </RouterLink> -->
                 <!-- <RouterLink to="/players"
                     class="hover:bg-gray-200 p-1 rounded-md cursor-pointer hover:shadow-md transition-all ease-in-out duration-300">
                     <i class="text-xl icon icon-a-Minecraft-Icons_-Logos_-Symbols--Free-Download-PN"></i>

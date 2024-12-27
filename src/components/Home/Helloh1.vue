@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 data-aos="fade-up" class="text-5xl font-bold text-white">MistMC</h1>
-        <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-white max-w-96 mt-2">MistMC，汇聚了一群充满热情、志同道合的腐竹与玩家，不断创新、探索新的游戏玩法，为每一位玩家带来无与伦比的新鲜刺激体验。</p>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-white max-w-96 mt-2">MistMC，一个充满创意与欢乐的 Minecraft 社区。这里有独特的游戏玩法、友善的玩家群体，以及无限的创造空间。</p>
         <div class="flex mt-4">
             <div 
                 data-aos="fade-up" 
