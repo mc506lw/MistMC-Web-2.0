@@ -1,5 +1,5 @@
 <template>
-  <img src="https://s1.imagehub.cc/images/2024/12/27/7da9b1423b46c58627e4dd2fc2c9fc97.png" class="absolute -top-32 left-0 -z-10 w-full h-full object-cover" />
+  <img src="https://drive.almondcloud.cn/f/Ovo1tP/7da9b1423b46c58627e4dd2fc2c9fc97.png" class="absolute -top-32 left-0 -z-10 w-full h-full object-cover" />
   <div class="absolute top-[25vh] left-8 md:left-32">
     <Helloh1 />
   </div>
