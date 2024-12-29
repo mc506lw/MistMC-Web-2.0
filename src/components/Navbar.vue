@@ -65,11 +65,16 @@
                 </a>
             </div>
             <div
-                class="h-12 w-44 bg-white/60 rounded-md shadow-xl flex items-center justify-between backdrop-blur-[2px]">
+                class="h-12 w-64 bg-white/60 rounded-md shadow-xl flex items-center justify-between backdrop-blur-[2px]">
                 <RouterLink to="/"
                     class="ml-2 hover:bg-gray-200 p-1 rounded-md cursor-pointer hover:shadow-md transition-all ease-in-out duration-300">
                     <i class="text-xl icon icon-home"></i>
                     <span class="text-xl ml-1">首页</span>
+                </RouterLink>
+                <RouterLink to="/download"
+                    class="hover:bg-gray-200 p-1 rounded-md cursor-pointer hover:shadow-md transition-all ease-in-out duration-300">
+                    <i class="text-xl icon icon-xiazai"></i>
+                    <span class="text-xl ml-1">下载</span>
                 </RouterLink>
                 <!-- <RouterLink to="/servers/slime"
                     class="hover:bg-gray-200 p-1 rounded-md cursor-pointer hover:shadow-md transition-all ease-in-out duration-300">

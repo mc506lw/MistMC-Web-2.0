@@ -8,6 +8,7 @@ import History from '../views/History.vue';
 import Players from '../views/Players.vue';
 import CCD from '../views/CCD.vue';
 import NotFound from '../components/NotFound.vue';
+import Download from '../components/Download.vue';
 
 const routes = [
   {
@@ -42,6 +43,10 @@ const routes = [
   {
     path: '/history',
     component: History
+  },
+  {
+    path: '/download',
+    component: Download
   },
   {
     path: '/players',

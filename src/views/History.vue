@@ -3,7 +3,7 @@
         <div class="max-w-4xl mx-8 xl:mx-auto">
             <h1 class="absolute text-4xl font-bold top-24 left-4 xl:left-24">岚域的历史</h1>
             <div class="mt-32 xl:mt-24 relative border-l border-blue-500">
-                <div data-aos="fade-up" :data-aos-delay="Number(index) * 100" v-for="item in timeline" :key="item.date"
+                <div :data-aos="index % 2 === 0 ? 'fade-left' : 'fade-right'" :data-aos-delay="50" v-for="(item, index) in timeline" :key="item.date"
                     class="mb-24 pl-8">
                     <div
                         class="absolute -left-4 w-8 h-8 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center">
