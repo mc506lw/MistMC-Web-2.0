@@ -110,12 +110,12 @@
             </div>
 
             <!-- 资源包配置和下载区域 -->
-            <div class="bg-white rounded-lg shadow-lg p-8">
+            <div data-aos="fade-up" data-aos-delay="700" class="bg-white rounded-lg shadow-lg p-8">
                 <h2 class="text-2xl font-bold mb-6 text-gray-800">自定义资源包</h2>
                 <div class="grid grid-cols-2 gap-8">
                     <div class="space-y-6">
                         <h3 class="text-lg font-semibold mb-4">功能选择</h3>
-                        <div data-aos="fade-up" data-aos-delay="0" class="feature-option"
+                        <div class="feature-option"
                             :class="{ 'feature-active': features.hdTextures }" @click="toggleFeature('hdTextures')">
                             <i class="icon fa-image text-2xl"></i>
                             <div class="ml-4">
@@ -127,7 +127,7 @@
                             </div>
                         </div>
 
-                        <div data-aos="fade-up" data-aos-delay="50" class="feature-option"
+                        <div class="feature-option"
                             :class="{ 'feature-active': features.eyegood }" @click="toggleFeature('eyegood')">
                             <i class="icon fa-sparkles text-2xl"></i>
                             <div class="ml-4">
@@ -139,7 +139,7 @@
                             </div>
                         </div>
 
-                        <div data-aos="fade-up" data-aos-delay="100" class="feature-option"
+                        <div class="feature-option"
                             :class="{ 'feature-active': features.goodanimals }" @click="toggleFeature('goodanimals')">
                             <i class="icon fa-music text-2xl"></i>
                             <div class="ml-4">
@@ -168,7 +168,7 @@
                                 <p>性能要求：{{ pref }}</p>
                             </div>
                         </div>
-                        <button data-aos="fade-up" data-aos-delay="100"
+                        <button
                             class="mt-8 bg-white text-blue-600 px-6 py-3 !rounded-button whitespace-nowrap hover:bg-blue-50 transition-all w-full font-semibold transform hover:scale-105 duration-300"
                             @click="downloadResourcePack">
                             <i class="icon icon-xiazai mr-2"></i>下载资源包
