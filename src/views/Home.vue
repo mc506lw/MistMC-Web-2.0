@@ -1,5 +1,5 @@
 <template>
-  <video src="https://drive.almondcloud.cn/f/k0M4sg/2024_12_29_10_50_59_x264.mp4" autoplay loop muted class="absolute -top-32 left-0 -z-10 w-full h-full object-cover" />
+  <video src="https://drive.almondcloud.cn/f/4Gn4ie/%E5%A4%B4%E5%9B%BE1.png" autoplay loop muted class="absolute -top-32 left-0 -z-10 w-full h-full object-cover" />
   <div class="absolute top-[25vh] left-8 md:left-32">
     <Helloh1 />
   </div>
