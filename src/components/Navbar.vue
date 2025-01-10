@@ -20,8 +20,16 @@
                         </RouterLink>
                         <RouterLink to="/players"
                             class="flex items-center mb-2 h-12 w-32 rounded-md hover:bg-gray-200 transition-all ease-in-out duration-300">
-                            <i class="text-xl ml-1 mr-1 icon icon-a-Minecraft-Icons_-Logos_-Symbols--Free-Download-PN"></i>
+                            <i
+                                class="text-xl ml-1 mr-1 icon icon-a-Minecraft-Icons_-Logos_-Symbols--Free-Download-PN"></i>
                             <span>优秀玩家</span>
+                        </RouterLink>
+                    </div>
+                    <div class="flex items-center space-x-4 mb-2">
+                        <RouterLink to="/function"
+                            class="flex items-center mb-2 h-12 w-32 rounded-md hover:bg-gray-200 transition-all ease-in-out duration-300">
+                            <i class="text-xl ml-1 mr-1 icon icon-liebiao"></i>
+                            <span>功能列表</span>
                         </RouterLink>
                     </div>
                     <div class="font-semibold text-gray-700 mb-2">相关链接</div>
@@ -51,7 +59,7 @@
         </div>
 
         <!-- 中部时间 -->
-        <TimePanel />
+            <TimePanel />
 
         <!-- 右侧菜单 -->
         <div class="fixed mt-5 right-10 flex">

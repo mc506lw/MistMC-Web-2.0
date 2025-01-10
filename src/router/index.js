@@ -9,6 +9,7 @@ import Players from '../views/Players.vue';
 import CCD from '../views/CCD.vue';
 import NotFound from '../components/NotFound.vue';
 import Download from '../components/Download.vue';
+import Functionlist from '../views/Functionlist.vue';
 
 const routes = [
   {
@@ -55,6 +56,10 @@ const routes = [
   {
     path: '/ccd',
     component: CCD
+  },
+  {
+    path: '/function',
+    component: Functionlist
   },
   {
     path: '/:pathMatch(.*)*',
