@@ -10,7 +10,7 @@ import { RouterLink } from 'vue-router';
 
         <RouterLink
             to="/"
-            class="mt-8 px-8 py-3 bg-blue-600 text-white !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap">
+            class="rounded-md mt-8 px-8 py-3 bg-blue-600 text-white !rounded-button hover:bg-blue-700 transition-colors whitespace-nowrap">
             返回首页
         </RouterLink>
     </div>
