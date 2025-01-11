@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import SlimeServer from '../components/Servers/SlimeServer.vue';
 import RetirementServer from '../components/Servers/RetirementServer.vue';
 import SkyblockServer from '../components/Servers/SkyblockServer.vue';
@@ -68,7 +68,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 

@@ -56,7 +56,7 @@
         <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div class="bg-white rounded-lg p-8 max-w-md w-full">
                 <h2 class="text-2xl font-bold mb-4">{{ selectedFeature.name }} 更多内容</h2>
-                <p class="mb-4">{{ selectedFeature.moreText }}</p>
+                <p class="mt-4">{{ selectedFeature.moreText }}</p>
                 <button @click="showModal = false"
                     class="rounded-md whitespace-nowrap px-4 py-2 bg-blue-500 text-white hover:bg-blue-400 transition duration-300">
                     关闭
@@ -64,7 +64,7 @@
             </div>
         </div>
 
-        <div class="w-full h-12 flex justify-center items-center">
+        <div class="w-full h-12 flex justify-center items-center mb-6">
             <h1 class="text-2xl">共收录<p class="text-2xl font-bold inline-block">{{ filteredFeatures.length }}</p>个指令</h1>
         </div>
 
