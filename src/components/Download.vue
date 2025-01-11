@@ -111,212 +111,96 @@
 
             <!-- 资源包配置和下载区域 -->
             <div data-aos="fade-up" data-aos-delay="700" class="bg-white rounded-lg shadow-lg p-8">
-                <h2 class="text-2xl font-bold mb-6 text-gray-800">自定义资源包</h2>
-                <div class="grid grid-cols-2 gap-8">
-                    <div class="space-y-6">
-                        <h3 class="text-lg font-semibold mb-4">功能选择</h3>
-                        <div class="feature-option"
-                            :class="{ 'feature-active': features.hdTextures }" @click="toggleFeature('hdTextures')">
-                            <i class="icon fa-image text-2xl"></i>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium">高清材质包（64x）</h4>
-                                <p class="text-sm text-gray-600">提升游戏画面品质，让方块世界更加细腻</p>
+                <h1 class="text-4xl font-bold text-gray-900 mb-12">岚域资源包</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div v-for="(pack, index) in resourcePacks" :key="index"
+                        class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img :src="pack.image" :alt="pack.name"
+                            class="w-full h-24 blur-[2px] object-cover object-top" />
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="flex-1 flex items-center">
+                                    <h2 class="text-2xl font-semibold text-gray-900 mb-2">{{ pack.name }}</h2>
+                                    <p v-for="type in pack.type" :key="type"
+                                        class="text-sm bg-slate-200 rounded-sm p-2 shadow-md px-2 text-gray-500 mb-1 ml-4">{{ type }}</p>
+                                </div>
+                                <button @click="downloadPack(pack.name)"
+                                    class="rounded whitespace-nowrap bg-blue-600 hover:bg-blue-700 text-white font-bold mb-2 py-2 px-4">
+                                    下载
+                                </button>
                             </div>
-                            <div class="feature-checkbox">
-                                <i class="icon icon-xuanze"></i>
-                            </div>
+                            <p class="text-gray-600 mb-4">{{ pack.description }}</p>
                         </div>
-
-                        <div class="feature-option"
-                            :class="{ 'feature-active': features.eyegood }" @click="toggleFeature('eyegood')">
-                            <i class="icon fa-sparkles text-2xl"></i>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium">护眼大补丸</h4>
-                                <p class="text-sm text-gray-600">红石党必备，让数格子更加轻松</p>
-                            </div>
-                            <div class="feature-checkbox">
-                                <i class="icon icon-xuanze"></i>
-                            </div>
-                        </div>
-
-                        <div class="feature-option"
-                            :class="{ 'feature-active': features.goodanimals }" @click="toggleFeature('goodanimals')">
-                            <i class="icon fa-music text-2xl"></i>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium">新鲜动画</h4>
-                                <p class="text-sm text-gray-600">使生物更加动态，增加沉浸感</p>
-                            </div>
-                            <div class="feature-checkbox">
-                                <i class="icon icon-xuanze"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
-                        <h3 class="text-2xl font-bold mb-6">资源包信息</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <i class="icon icon-xianshi_xuanze text-xl mr-3"></i>
-                                <p>已选功能：{{ selectedFeaturesText }}</p>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="icon icon-wenjiandaxiao_huaban text-xl mr-3"></i>
-                                <p>包大小：{{ packageSize }} MB</p>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="icon icon-xingneng text-xl mr-3"></i>
-                                <p>性能要求：{{ pref }}</p>
-                            </div>
-                        </div>
-                        <button
-                            class="mt-8 bg-white text-blue-600 px-6 py-3 !rounded-button whitespace-nowrap hover:bg-blue-50 transition-all w-full font-semibold transform hover:scale-105 duration-300"
-                            @click="downloadResourcePack">
-                            <i class="icon icon-xiazai mr-2"></i>下载资源包
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center my-8">
-            <span>感谢<a class="text-blue-600 hover:text-blue-800" href="https://drive.almondcloud.cn/" target="_blank">杏仁云盘</a>提供的免费云存储服务</span>
-        </div>
+    </div>
+    <div class="text-center my-8">
+        <span>感谢<a class="text-blue-600 hover:text-blue-800" href="https://drive.almondcloud.cn/"
+                target="_blank">杏仁云盘</a>提供的免费云存储服务</span>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
-const features = ref({
-    hdTextures: false,
-    eyegood: false,
-    goodanimals: false
-});
+interface ResourcePack {
+    name: string;
+    type: string[];
+    image: string;
+    description: string;
+    downloadurl?: string;
+}
 
-const selectedFeaturesText = computed(() => {
-    const selected = [];
-    if (features.value.hdTextures) selected.push('高清材质包');
-    if (features.value.eyegood) selected.push('护眼大补丸');
-    if (features.value.goodanimals) selected.push('新鲜动画');
-    return selected.length ? selected.join(' + ') : '基础包';
-});
+const resourcePacks = ref<ResourcePack[]>([
+    {
+        name: "基础包",
+        type: ["必须安装"],
+        image: "https://drive.almondcloud.cn/f/60PBSr/%E5%89%8D%E9%83%A8-%E5%9F%BA%E7%A1%80.png",
+        description: "这个基础包包含了服务器所需的所有基本材质和模型。它是享受完整游戏体验的必备资源包。",
+        downloadurl: "https://drive.almondcloud.cn/f/ePRRUd/MistMC%E5%9F%BA%E7%A1%80%E5%8C%85.zip"
+    },
+    {
+        name: "粘液科技附加包",
+        type: ["推荐安装"],
+        image: "https://drive.almondcloud.cn/f/Ov05FP/%E5%89%8D%E9%83%A8-%E7%B2%98%E6%B6%B2.png",
+        description: "粘液附加包为粘液科技的部分物品和方块添加了材质，让它们看起来更加舒适。",
+        downloadurl: "https://drive.almondcloud.cn/f/yed2s4/MistMC%E7%B2%98%E6%B6%B2%E6%9D%90%E8%B4%A8%E5%8C%85.zip"
+    },
+    {
+        name: "武器附加包",
+        type: ["推荐安装", "PBR材质"],
+        image: "https://drive.almondcloud.cn/f/PJ9gcV/%E5%89%8D%E9%83%A8-%E6%AD%A6%E5%99%A8.png",
+        description: "武器附加包为岚域的特殊武器添加了一系列精美设计的武器模型和材质，让武器更加具有视觉效果。",
+        downloadurl: "https://drive.almondcloud.cn/f/JwK6FR/MistMC%E6%AD%A6%E5%99%A8%E5%8C%85.zip"
+    }
+]);
 
-const packageSize = computed(() => {
-    let size = 1.6; // 基础包大小
-    if (features.value.hdTextures) size += 10.23;
-    if (features.value.eyegood) size += 0.23;
-    if (features.value.goodanimals) size += 0.55;
-    return Math.round(size * 100) / 100; // 四舍五入到小数点后两位
-});
-
-const pref = computed(() => {
-    let size = 1.5; // 基础包大小
-    if (features.value.hdTextures) size += 6;
-    if (features.value.eyegood) size += 1.5;
-    if (features.value.goodanimals) size += 3;
-    if (size > 10) return '高';
-    if (size > 5) return '中';
-    return '低';
-});
-
-const toggleFeature = (feature: keyof typeof features.value) => {
-    features.value[feature] = !features.value[feature];
-};
-
-const downloadPCL = () => {
-    window.open('https://example.com/pcl-download', '_blank');
-};
-
-const downloadHMCL = () => {
-    window.open('https://example.com/hmcl-download', '_blank');
+const downloadPack = (packName: string) => {
+    const pack = resourcePacks.value.find(p => p.name === packName);
+    if (pack && pack.downloadurl) {
+        window.open(pack.downloadurl);
+    }
 };
 
 const downloadPCLQZ = () => {
-    window.open('https://example.com/pcl-download-qz', '_blank');
+    window.open("https://drive.almondcloud.cn/f/GbR8in/PCL2%E5%BF%85%E8%A3%85%E5%89%8D%E7%BD%AE%20.NET%204.6.2.exe");
+};
+
+const downloadPCL = () => {
+    window.open("https://drive.almondcloud.cn/f/BX1rSB/Plain%20Craft%20Launcher%202.exe");
+};
+
+const downloadHMCL = () => {
+    window.open("https://github.com/huanghongxun/HMCL/releases/download/v3.4.1/HMCL-3.4.1.exe");
 };
 
 const downloadModpack1 = () => {
-    window.open('https://drive.almondcloud.cn/f/XxOOfD/%E8%85%90%E7%AB%B9%E6%8E%A8%E8%8D%90%E6%95%B4%E5%90%88%E5%8C%85-1.20.4-1.0.0.zip', '_blank');
+    window.open("https://drive.almondcloud.cn/f/XxOOfD/%E8%85%90%E7%AB%B9%E6%8E%A8%E8%8D%90%E6%95%B4%E5%90%88%E5%8C%85-1.20.4-1.0.0.zip");
 };
 
 const downloadModpack2 = () => {
-    window.open('https://drive.almondcloud.cn/f/VZneI0/Fore%E7%9A%84%E6%95%B4%E5%90%88%E5%8C%85%201.0.0.mrpack', '_blank');
-};
-
-const downloadResourcePack = () => {
-    const urls = {
-        '': 'https://drive.almondcloud.cn/f/14r1Sm/MistMC%E6%9D%90%E8%B4%A8%E5%8C%85.zip',
-        '高清材质包': 'https://drive.almondcloud.cn/f/zyvbsy/MistMC%E6%9D%90%E8%B4%A8%E5%8C%85%20+%20Faithful%2064x.zip',
-        '护眼大补丸': 'https://drive.almondcloud.cn/f/YJPxSe/MistMC%E6%9D%90%E8%B4%A8%E5%8C%85%20+%20%E6%8A%A4%E7%9C%BC%E5%A4%A7%E8%A1%A5%E4%B8%B8.zip',
-        '新鲜动画': 'https://drive.almondcloud.cn/f/ZwWQUo/MistMC%E6%9D%90%E8%B4%A8%E5%8C%85%20+%20FreshAnimations.zip',
-        '高清材质包_护眼大补丸': 'https://drive.almondcloud.cn/f/jZP9S6/MistMC%E6%9D%90%E8%B4%A8%E5%8C%85%20+%20Faithful%2064x%20+%20%E6%8A%A4%E7%9C%BC%E5%A4%A7%E8%A1%A5%E4%B8%B8.zip',
-        '高清材质包_新鲜动画': 'https://drive.almondcloud.cn/f/ZwWQUo/MistMC%E6%9D%90%E8%B4%A8%E5%8C%85%20+%20FreshAnimations.zip',
-        '护眼大补丸_新鲜动画': 'https://drive.almondcloud.cn/f/DgDRh4/MistMC%E6%9D%90%E8%B4%A8%E5%8C%85%20+%20%E6%8A%A4%E7%9C%BC%E5%A4%A7%E8%A1%A5%E4%B8%B8%20+%20FreshAnimations.zip',
-        '高清材质包_护眼大补丸_新鲜动画': 'https://drive.almondcloud.cn/f/EWXxsj/MistMC%E6%9D%90%E8%B4%A8%E5%8C%85%20+%20Faithful%2064x%20+%20%E6%8A%A4%E7%9C%BC%E5%A4%A7%E8%A1%A5%E4%B8%B8%20+%20FreshAnimations.zip'
-    };
-
-    let params = [];
-    if (features.value.hdTextures) params.push('高清材质包');
-    if (features.value.eyegood) params.push('护眼大补丸');
-    if (features.value.goodanimals) params.push('新鲜动画');
-
-    const key = params.join('_');
-    const url = urls[key] || 'https://drive.almondcloud.cn/f/14r1Sm/MistMC%E6%9D%90%E8%B4%A8%E5%8C%85.zip';  // 默认链接
-
-    window.open(url, '_blank');
+    window.open("https://drive.almondcloud.cn/f/VZneI0/Fore%E7%9A%84%E6%95%B4%E5%90%88%E5%8C%85%201.0.0.mrpack");
 };
 </script>
-
-<style scoped>
-.container {
-    min-height: 1024px;
-}
-
-.feature-option {
-    display: flex;
-    align-items: center;
-    padding: 1.25rem;
-    border: 2px solid #e5e7eb;
-    border-radius: 0.75rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.feature-option:hover {
-    border-color: #93c5fd;
-    transform: translateY(-2px);
-}
-
-.feature-active {
-    border-color: #2563eb;
-    background-color: #eff6ff;
-}
-
-.feature-checkbox {
-    margin-left: auto;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 2px solid #e5e7eb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.feature-active .feature-checkbox {
-    background-color: #2563eb;
-    border-color: #2563eb;
-    color: white;
-}
-
-.feature-checkbox i {
-    opacity: 0;
-    transform: scale(0.5);
-    transition: all 0.3s ease;
-}
-
-.feature-active .feature-checkbox i {
-    opacity: 1;
-    transform: scale(1);
-}
-</style>

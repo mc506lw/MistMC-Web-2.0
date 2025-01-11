@@ -7,7 +7,7 @@
             'h-12 w-44': !isPanelOpen,
             'h-12 w-1/3': isPanelOpen
         }"
-            class="fixed top-0 left-1/2 transform -translate-x-1/2 -ml-4 mt-5 flex justify-center items-center text-xl font-bold cursor-pointer bg-white/60  backdrop-blur-sm hover:scale-105">
+            class="fixed top-0 left-1/2 transform -translate-x-1/2 mt-5 flex justify-center items-center text-xl font-bold cursor-pointer bg-white/60  backdrop-blur-sm hover:scale-105">
             <div name="fade" class="transition-all duration-500 ease-in-out"
                 :class="{ 'absolute left-1/2 -translate-x-1/2': !isPanelOpen, 'absolute left-3': isPanelOpen }">
                 <span>{{ currentTime }}</span>
