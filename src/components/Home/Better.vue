@@ -4,7 +4,7 @@
         <div data-aos="fade-up" class="flex justify-center items-center h-full w-5/6 mx-auto">
             <div data-aos="fade-up" data-aos-delay="800" class="flex-1 w-64 h-32 mb-16 ms:mt-24">
                 <div class="flex items-center">
-                    <i class="icon icon-wanfa text-4xl p-1 bg-white rounded-md"></i>
+                    <i class="icon icon-AIEMA-dianluban text-4xl p-1 bg-white rounded-md"></i>
                     <h1 class="text-2xl font-bold text-black ml-2">稳定的服务器</h1>
                 </div>
                 <p class="text-sm text-black mt-2">MistMC 采用高性能服务器配置，确保流畅的游戏体验，TB级备份组，保证游戏数据安全。</p>
@@ -18,7 +18,7 @@
             </div>
             <div data-aos="fade-up" data-aos-delay="1200" class="flex-1 w-64 h-32 mb-16 ms:mt-24">
                 <div class="flex items-center">
-                    <i class="icon icon-wanfa text-4xl p-1 bg-white rounded-md"></i>
+                    <i class="icon icon-anquanzhongxin text-4xl p-1 bg-white rounded-md"></i>
                     <h1 class="text-2xl font-bold text-black ml-2">自由但安全</h1>
                 </div>
                 <p class="text-sm text-black mt-2">MistMC 拥有强大的反作弊系统，确保游戏公平性，同时还能够兼容投影等辅助MOD。</p>
