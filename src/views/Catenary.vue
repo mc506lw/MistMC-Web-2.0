@@ -16,7 +16,7 @@
                         </div>
                     </div>
 
-                    <div class="mb-6 ml-12">
+                    <div class="mb-6 ml-12 w-full">
                         <img :src="recipe.resultImage"
                             class="w-full h-48 aspect-square object-cover rounded-lg mb-4">
                         <p class="text-gray-600">{{ recipe.description }}</p>
