@@ -10,6 +10,7 @@ import CCD from '../views/CCD.vue';
 import NotFound from '../components/NotFound.vue';
 import Download from '../components/Download.vue';
 import Functionlist from '../views/Functionlist.vue';
+import Catenary from '../views/Catenary.vue';
 
 const routes = [
   {
@@ -60,6 +61,10 @@ const routes = [
   {
     path: '/function',
     component: Functionlist
+  },
+  {
+    path: '/catenary',
+    component: Catenary
   },
   {
     path: '/:pathMatch(.*)*',

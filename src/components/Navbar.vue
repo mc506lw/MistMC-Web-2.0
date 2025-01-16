@@ -31,6 +31,11 @@
                             <i class="text-xl ml-1 mr-1 icon icon-liebiao"></i>
                             <span>功能列表</span>
                         </RouterLink>
+                        <RouterLink to="/catenary"
+                            class="flex items-center mb-2 h-12 w-32 rounded-md hover:bg-gray-200 transition-all ease-in-out duration-300">
+                            <i class="text-xl ml-1 mr-1 icon icon-peifangzu"></i>
+                            <span>更多配方</span>
+                        </RouterLink>
                     </div>
                     <div class="font-semibold text-gray-700 mb-2">相关链接</div>
                     <div class="flex items-center space-x-4 mb-2">
