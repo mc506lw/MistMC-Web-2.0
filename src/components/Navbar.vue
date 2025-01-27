@@ -2,7 +2,7 @@
     <div class="relative h-12 z-50 w-full">
         <!-- 左侧LOGO+更多按钮 -->
         <div
-            class="fixed mt-5 ml-5 w-44 p-2 h-12 bg-white/60 backdrop-blur-sm rounded-md shadow-xl cursor-pointer flex items-center bg-blend-normal">
+            class="fixed mt-5 ml-5 w-50 p-2 h-12 bg-white/60 backdrop-blur-sm rounded-md shadow-xl cursor-pointer flex items-center bg-blend-normal">
             <div @mouseenter="showmorepanel = true" @mouseleave="showmorepanel = false"
                 class="ml-1 hover:bg-gray-200 rounded-md w-8 h-8 flex justify-center items-center transition-all ease-in-out duration-300 delay-75">
                 <i class="text-2xl icon icon-gengduo transition-all ease-in-out duration-300 hover:scale-105"></i>
@@ -61,10 +61,14 @@
                 <h1 class="ml-1 text-3xl font-bold transition-opacity duration-500 opacity-100">
                     MistMC</h1>
             </RouterLink>
+            <RouterLink to="/aichat" class="flex justify-center items-center">
+                <h1 class="w-10 ml-1 text-center text-2xl bg-zinc-50/50 rounded-md p-1 transition-opacity duration-500 opacity-100">
+                    AI</h1>
+            </RouterLink>
         </div>
 
         <!-- 中部时间 -->
-            <TimePanel />
+        <TimePanel />
 
         <!-- 右侧菜单 -->
         <div class="fixed mt-5 right-10 flex">

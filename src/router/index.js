@@ -11,6 +11,7 @@ import NotFound from '../components/NotFound.vue';
 import Download from '../components/Download.vue';
 import Functionlist from '../views/Functionlist.vue';
 import Catenary from '../views/Catenary.vue';
+import AIchat from '../views/AIchat.vue';
 
 const routes = [
   {
@@ -65,6 +66,10 @@ const routes = [
   {
     path: '/catenary',
     component: Catenary
+  },
+  {
+    path: '/aichat',
+    component: AIchat
   },
   {
     path: '/:pathMatch(.*)*',
