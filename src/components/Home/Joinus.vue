@@ -15,7 +15,7 @@
             <span class="text-4xl font-bold text-black">来进入服务器！</span>
         </div>
         <div data-aos="fade-up" class="flex justify-center items-center h-auto w-full">
-            <a href="https://docs.mistmc.top/zh-CN/docs/start/start.html" target="_blank" class="text-xl text-black underline">有疑问？点击这里查看文档！</a>
+            <a href="https://qm.qq.com/q/erOHvH36v" target="_blank" class="text-xl text-black underline">有疑问？点击这里加入交流群！</a>
         </div>
         <!-- 自定义弹窗 -->
         <div v-if="showAlert" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">

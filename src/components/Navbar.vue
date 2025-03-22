@@ -18,19 +18,19 @@
                             <i class="text-xl ml-1 mr-1 icon icon-yingjianxinxi"></i>
                             <span>硬件展示</span>
                         </RouterLink>
-                        <RouterLink to="/players"
+                        <!-- <RouterLink to="/players"
                             class="flex items-center mb-2 h-12 w-32 rounded-md hover:bg-gray-200 transition-all ease-in-out duration-300">
                             <i
                                 class="text-xl ml-1 mr-1 icon icon-a-Minecraft-Icons_-Logos_-Symbols--Free-Download-PN"></i>
                             <span>优秀玩家</span>
-                        </RouterLink>
+                        </RouterLink> -->
                     </div>
                     <div class="flex items-center space-x-4 mb-2">
-                        <RouterLink to="/function"
+                        <!-- <RouterLink to="/function"
                             class="flex items-center mb-2 h-12 w-32 rounded-md hover:bg-gray-200 transition-all ease-in-out duration-300">
                             <i class="text-xl ml-1 mr-1 icon icon-liebiao"></i>
                             <span>功能列表</span>
-                        </RouterLink>
+                        </RouterLink> -->
                         <RouterLink to="/catenary"
                             class="flex items-center mb-2 h-12 w-32 rounded-md hover:bg-gray-200 transition-all ease-in-out duration-300">
                             <i class="text-xl ml-1 mr-1 icon icon-peifangzu"></i>
@@ -61,10 +61,6 @@
                 <h1 class="ml-1 text-3xl font-bold transition-opacity duration-500 opacity-100">
                     MistMC</h1>
             </RouterLink>
-            <RouterLink to="/aichat" class="flex justify-center items-center">
-                <h1 class="w-10 ml-1 text-center text-2xl bg-zinc-50/50 rounded-md p-1 transition-opacity duration-500 opacity-100">
-                    AI</h1>
-            </RouterLink>
         </div>
 
         <!-- 中部时间 -->
@@ -82,17 +78,17 @@
                 </a>
             </div>
             <div
-                class="h-12 w-64 bg-white/60 rounded-md shadow-xl flex items-center justify-between backdrop-blur-[2px]">
+                class="h-12 w-44 bg-white/60 rounded-md shadow-xl flex items-center justify-between backdrop-blur-[2px]">
                 <RouterLink to="/"
                     class="ml-2 hover:bg-gray-200 p-1 rounded-md cursor-pointer hover:shadow-md transition-all ease-in-out duration-300">
                     <i class="text-xl icon icon-home"></i>
                     <span class="text-xl ml-1">首页</span>
                 </RouterLink>
-                <RouterLink to="/download"
+                <!-- <RouterLink to="/download"
                     class="hover:bg-gray-200 p-1 rounded-md cursor-pointer hover:shadow-md transition-all ease-in-out duration-300">
                     <i class="text-xl icon icon-xiazai"></i>
                     <span class="text-xl ml-1">下载</span>
-                </RouterLink>
+                </RouterLink> -->
                 <!-- <RouterLink to="/servers/slime"
                     class="hover:bg-gray-200 p-1 rounded-md cursor-pointer hover:shadow-md transition-all ease-in-out duration-300">
                     <i class="text-xl icon icon-fuwuqi1"></i>
